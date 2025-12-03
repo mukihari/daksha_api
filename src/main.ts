@@ -6,6 +6,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'https://daksha-frontend.vercel.app',
+      'https://daksha-api-git-main-mukiharis-projects.vercel.app/auth/login',
       'https://daksha-frontend-git-main-mukiharis-projects.vercel.app',
       'https://daksha-frontend-g7r3t95um-mukiharis-projects.vercel.app',
       'http://localhost:4200',
