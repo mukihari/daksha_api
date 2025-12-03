@@ -16,7 +16,7 @@ export const DB = Symbol('DB');
       useFactory: (configService: ConfigService) => {
         const pool = new Pool({
           connectionString: 'psql postgresql://neondb_owner:npg_1twSWPBvmb5Z@ep-shy-waterfall-a18rfqbq-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require',
-          
+          ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
         });
         return drizzle(pool, { schema });
       },
