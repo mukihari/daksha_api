@@ -4,14 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: [
-      'https://daksha-frontend.vercel.app',
-      'https://daksha-api-git-main-mukiharis-projects.vercel.app/auth/login',
-      'https://daksha-frontend-git-main-mukiharis-projects.vercel.app',
-      'https://daksha-frontend-g7r3t95um-mukiharis-projects.vercel.app',
-      'http://localhost:4200',
-      'http://localhost:3000',
-    ],
+    origin: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
