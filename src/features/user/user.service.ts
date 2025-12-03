@@ -52,7 +52,7 @@ export class UsersService {
 
   async update(id: string, updateUserDto: UpdateUserDto) {
   
-    const { password, ...userData } = updateUserDto;
+    const { password, ...userData } = updateUserDto as any;
     
     const valuesToUpdate: any = { ...userData };
 
