@@ -15,7 +15,7 @@ export const DB = Symbol('DB');
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
         const pool = new Pool({
-          connectionString: 'postgresql://postgres:Mukunda;slaptop@localhost:5433/user_management',
+          connectionString: process.env.DATABASE_URL,
         });
         return drizzle(pool, { schema });
       },
