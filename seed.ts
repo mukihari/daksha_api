@@ -20,7 +20,7 @@ async function seed() {
   console.log('Seeding database...');
 
   const adminEmail = 'admin@example.com'; 
-  const adminPassword = 'admin';
+  const adminPassword = '$2a$12$xVLfFMoGQpJXKxTrvO6UBObnC558imXgrar174zFmne0o9GjPbfiu';
   const adminPhone = '+911234567890';
 
   const existingUser = await db.query.user.findFirst({
